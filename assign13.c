@@ -29,9 +29,14 @@ void insertAtHead(int x){
 }
 
 void deleteFirst(){
+	if(head==NULL){
+	  printf("Could not delete from an empty list");
+	  return;
+	}
 	struct node* temp = head;
-	head = temp->next;
-	temp = NULL;
+	head = head->next;
+	head->prev = NULL;
+	free(temp);
 }
 
 void display(){
