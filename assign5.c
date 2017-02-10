@@ -25,7 +25,7 @@ int main(){
 
 void BubbleSort(int a[10],int n){
 	int k,i,flag,temp;
-	for(k=0;k<n-2;k++){
+	for(k=0;k<n-1;k++){
 		flag=0;
 		for(i=0;i<n-k-1;i++){
 			if(a[i]>a[i+1]){
